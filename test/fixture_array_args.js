@@ -8,6 +8,6 @@ module.exports = function () {
   } else if (x < 2) {
     return DOM('h1', null, "One is less than two");
   } else {
-    return DOM('div', {class: "title"}, DOM('h1', null, "elements can be nested"));
+    return DOM('div', {'class-name': "title"}, DOM('h1', null, "elements can be nested"));
   }
 };
