@@ -11,14 +11,20 @@ function fromString(code, o = {}) {
     unknownTagPattern: `{tag}`,
     passUnknownTagsToFactory: false,
     unknownTagsAsString: false,
-    arrayChildren: true
+    arrayChildren: true,
+    ecmaVersion: 8
   }, o)
 
   if (options.factory === undefined) {
     throw new Error('Missing options.factory function name.')
   }
 
-  const codegen = new JSXCodeGenerator(code, JSXParser.parse(code), options)
+  const parseOptions = {
+    ecmaVersion: options.ecmaVersion
+  }
+
+  const node = JSXParser.parse(code, parseOptions)
+  const codegen = new JSXCodeGenerator(code, node, options)
   return codegen.generate()
 }
 

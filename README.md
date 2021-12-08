@@ -55,6 +55,7 @@ Desugar JSX and return transformed string.
 | [options.passUnknownTagsToFactory] | <code>Boolean</code> | Handle unknown tags like known tags, and pass them as an object to `options.factory`. If true, `createElement(Component)` instead of `Component()` (default: false). |
 | [options.unknownTagsAsString] | <code>Boolean</code> | Pass unknown tags as string to `options.factory` (default: false). |
 | [options.arrayChildren] | <code>Boolean</code> | Pass children as array instead of arguments (default: true). |
+| [options.ecmaversion] | <code>Number</code> | ECMAScript version (default: 8). |
 
 **Example**  
 ```javascript
