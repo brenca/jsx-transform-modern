@@ -37,7 +37,9 @@
   "dependencies": {
     "acorn": "^8.5.0",
     "acorn-jsx": "^5.3.2",
-    "acorn-walk": "^8.2.0"
+    "acorn-walk": "^8.2.0",
+    "inline-source-map": "^0.6.2",
+    "through2": "^4.0.2"
   },
   "devDependencies": {
     "browserify": "^17.0.0",

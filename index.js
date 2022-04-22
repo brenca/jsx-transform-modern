@@ -12,7 +12,8 @@ function fromString(code, o = {}) {
     passUnknownTagsToFactory: false,
     unknownTagsAsString: false,
     arrayChildren: true,
-    ecmaVersion: 8
+    ecmaVersion: 8,
+    filename: 'original.jsx'
   }, o)
 
   if (options.factory === undefined) {
@@ -23,13 +24,14 @@ function fromString(code, o = {}) {
     ecmaVersion: options.ecmaVersion
   }
 
-  const node = JSXParser.parse(code, parseOptions)
+  const node = JSXParser.parse(code, options.filename, parseOptions)
   const codegen = new JSXCodeGenerator(code, node, options)
   return codegen.generate()
 }
 
-function fromFile(path, o = {}) {
-  return fromString(fs.readFileSync(path, 'utf8'), o)
+function fromFile(p, o = {}) {
+  o.filename = path.basename(p)
+  return fromString(fs.readFileSync(p, 'utf8'), o)
 }
 
 function browserifyTransform(filename, options) {
@@ -45,6 +47,8 @@ browserifyTransform.configure = function (options) {
     if (!~options.extensions.indexOf(path.extname(filename))) {
       return through()
     }
+    
+    options.filename = path.basename(filename)
 
     var data = "";
 
