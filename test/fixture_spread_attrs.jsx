@@ -1,9 +1,13 @@
 module.exports = function () {
   <Component {...firstSpread} {...secondSpread}>
     <div some="prop" another="prop">Test</div>
-    <div {...thirdSpread}>Test</div>
+    <div {...thirdSpread}>
+      Test
+      Test2
+    </div>
     <>
-      <Component {...firstSpread} {...secondSpread} 
+      <Component {...firstSpread} 
+        {...secondSpread} 
         foo="baz" />
       <Component {...state.nested} foo="bar" />
       <Component {...state[0]} foo="bar" />

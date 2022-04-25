@@ -13,7 +13,8 @@ function fromString(code, o = {}) {
     unknownTagsAsString: false,
     arrayChildren: true,
     ecmaVersion: 8,
-    filename: 'original.jsx'
+    filename: 'original.jsx',
+    sourceMap: true
   }, o)
 
   if (options.factory === undefined) {
@@ -26,7 +27,14 @@ function fromString(code, o = {}) {
 
   const node = JSXParser.parse(code, options.filename, parseOptions)
   const codegen = new JSXCodeGenerator(code, node, options)
-  return codegen.generate()
+  
+  const result = codegen.generate()
+  
+  if (options.sourceMap) {
+    return `${result.code}\n\n${result.map}\n`
+  } else {
+    return `${result.code}`
+  }
 }
 
 function fromFile(p, o = {}) {

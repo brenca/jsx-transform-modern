@@ -1,12 +1,5 @@
 module.exports = function () {
-  DOM(Component, Object.assign({}, firstSpread, secondSpread), 
-    DOM('div', {some: "prop", another: "prop"}, "Test"), 
-    DOM('div', Object.assign({}, thirdSpread), "Test"), 
-    DOM(null, null, [
-      DOM(Component, Object.assign({}, firstSpread, secondSpread, {foo: "baz"})), 
-      DOM(Component, Object.assign({}, state.nested, {foo: "bar"})), 
-      DOM(Component, Object.assign({}, state[0], {foo: "bar"})), 
-      DOM(Component, Object.assign({}, state[0][1], {foo: "bar"})), 
-    ])
-  )
+  DOM(Component,Object.assign({},firstSpread,secondSpread),DOM('div',{some:"prop",another:"prop"},"Test"),DOM('div',Object.assign({},thirdSpread),"Test"+' '+"Test2"),DOM(null,null,[DOM(Component,Object.assign({},firstSpread,secondSpread,{foo:"baz"})),DOM(Component,Object.assign({},state.nested,{foo:"bar"})),DOM(Component,Object.assign({},state[0],{foo:"bar"})),DOM(Component,Object.assign({},state[0][1],{foo:"bar"})),]),)
 };
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm9yaWdpbmFsLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLFFBQVEsR0FBRyxZQUFZO0VBQzNCLEdBQUEsQ0FBQSxBQUFDLFNBQVMsZUFBQyxFQUFnQixDQUFoQixBQUFJLFdBQVksQ0FBQyxBQUFJLFlBQXRCLEFBQW1DLEVBQUMsQUFDNUMsR0FBQSxDQUFBLEFBQUMsS0FBQSxBQUFHLEVBQUMsS0FBSyxNQUFNLENBQUMsUUFBUSxNQUFyQixBQUEyQixFQUFDLE1BQUksQ0FBQSxDQUFNLEFBQzFDLEdBQUEsQ0FBQSxBQUFDLEtBQUEsQUFBRyxlQUFDLEVBQWdCLENBQWhCLEFBQUksV0FBTCxBQUFpQixFQUFDLEFBQ3BCLFdBQ0EsT0FDRixDQUFBLENBQU0sQUFDTixHQUFBLE1BQUUsTUFBQSxBQUNBLEdBQUEsQ0FBQSxBQUFDLFNBQVMsZUFBQyxFQUFnQixDQUFoQixBQUFJLFdBQVksQ0FDekIsQUFBSSxZQUFhLEVBQ2pCLElBQUksS0FBSixBQUFTLENBRkQsQUFFQyxHQUFHLEFBQ2QsR0FBQSxDQUFBLEFBQUMsU0FBUyxlQUFDLEVBQWlCLENBQWpCLEFBQUksS0FBSyxPQUFRLEVBQUMsSUFBSSxLQUFKLEFBQVMsQ0FBNUIsQUFBNEIsR0FBRyxBQUN6QyxHQUFBLENBQUEsQUFBQyxTQUFTLGVBQUMsRUFBYSxDQUFiLEFBQUksS0FBSyxDQUFDLENBQUMsQ0FBRSxFQUFDLElBQUksS0FBSixBQUFTLENBQXhCLEFBQXdCLEdBQUcsQUFDckMsR0FBQSxDQUFBLEFBQUMsU0FBUyxlQUFDLEVBQWdCLENBQWhCLEFBQUksS0FBSyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBRSxFQUFDLElBQUksS0FBSixBQUFTLENBQTNCLEFBQTJCLEdBQUcsRUFDMUMsQ0FBRyxBQUNMLENBQUEsQUFBWTtDQUNiLENBQUMiLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24gKCkge1xuICA8Q29tcG9uZW50IHsuLi5maXJzdFNwcmVhZH0gey4uLnNlY29uZFNwcmVhZH0+XG4gICAgPGRpdiBzb21lPVwicHJvcFwiIGFub3RoZXI9XCJwcm9wXCI+VGVzdDwvZGl2PlxuICAgIDxkaXYgey4uLnRoaXJkU3ByZWFkfT5cbiAgICAgIFRlc3RcbiAgICAgIFRlc3QyXG4gICAgPC9kaXY+XG4gICAgPD5cbiAgICAgIDxDb21wb25lbnQgey4uLmZpcnN0U3ByZWFkfSBcbiAgICAgICAgey4uLnNlY29uZFNwcmVhZH0gXG4gICAgICAgIGZvbz1cImJhelwiIC8+XG4gICAgICA8Q29tcG9uZW50IHsuLi5zdGF0ZS5uZXN0ZWR9IGZvbz1cImJhclwiIC8+XG4gICAgICA8Q29tcG9uZW50IHsuLi5zdGF0ZVswXX0gZm9vPVwiYmFyXCIgLz5cbiAgICAgIDxDb21wb25lbnQgey4uLnN0YXRlWzBdWzFdfSBmb289XCJiYXJcIiAvPlxuICAgIDwvPlxuICA8L0NvbXBvbmVudD5cbn07XG4iXX0=
