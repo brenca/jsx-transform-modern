@@ -1,6 +1,6 @@
 {
   "name": "jsx-transform-modern",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "JSX transpiler. Desugar JSX into JavaScript. A standard and configurable implementation of JSX decoupled from React.",
   "main": "index.js",
   "repository": {

@@ -10,6 +10,7 @@ function fromString(code, o = {}) {
     spreadFn: `Object.assign`,
     unknownTagPattern: `{tag}`,
     passUnknownTagsToFactory: false,
+    knownTagsAsString: true,
     unknownTagsAsString: false,
     arrayChildren: true,
     ecmaVersion: 8,

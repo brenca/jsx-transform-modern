@@ -60,7 +60,7 @@ describe('jsx.fromString()', function() {
       factory: 'DOM'
     })
     expect(result).to.be.a('string')
-    expect(result).to.contain("DOM(h1")
+    expect(result).to.contain("DOM('h1")
   })
 
   it('fromStrings self-closing tags', function () {
@@ -68,7 +68,7 @@ describe('jsx.fromString()', function() {
       factory: 'DOM'
     })
     expect(result).to.be.a('string')
-    expect(result).to.contain("DOM(link")
+    expect(result).to.contain("DOM('link")
   })
 
   it('renders JS expressions inside JSX tag', function () {
@@ -99,7 +99,7 @@ describe('jsx.fromString()', function() {
         factory: "mercury.h"
       })
       expect(result).to.be.a('string')
-      expect(result).to.contain("mercury.h(h1")
+      expect(result).to.contain("mercury.h('h1")
     })
   })
 
