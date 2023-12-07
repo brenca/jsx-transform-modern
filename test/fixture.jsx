@@ -6,7 +6,7 @@ module.exports = function () {
   if (x < 1) {
     return <div></div>;
   } else if (x < 2) {
-    return <h1>One is less than two</h1>;
+    return <h1>One is "less" than two</h1>;
   } else {
     return <div class-name="title"><h1>elements can be nested</h1></div>;
   }
